@@ -98,8 +98,8 @@ let app = (function () {
         //window.alert("First element: " + myArray[0].age); 
         // do not window.alert; slows down app and bad UX
 
-        let dicision = confirm("Are you sure?")
-        console.log(dicision)
+        // let decision = confirm("Are you sure?")
+        // console.log(decision)
 
         // === checks both value and type where == only checks value
         if (myArray[0].age === 25) {
