@@ -7,22 +7,24 @@ let app = (function () {
 
     //function scope variable
 
+    //let AboutButton = document.getElementById("AboutButton");
+
     // about button click event handler
     function AboutButtonClick() {
         console.log("About Button was clicked");
     }
     function AboutButtonOver(event) {
+        // AboutButton.style.opacity = 0.3;
         event.currentTarget.style.opacity = 0.3;
     }
     function AboutButtonOut(event) {
+        // AboutButton.style.opacity = 1;
         event.currentTarget.style.opacity = 1;
     }
 
     function HomeContent() {
         let AboutButton = document.getElementById("AboutButton");
-
         AboutButton.textContent = "About";
-
         // about button event listener
         AboutButton.addEventListener("click", AboutButtonClick);
         AboutButton.addEventListener("mouseover", AboutButtonOver);
@@ -148,7 +150,7 @@ let app = (function () {
 
     
     function ContactContent(){
-        
+
     }
 
     function Start() {
@@ -186,7 +188,7 @@ let app = (function () {
     // window.onload = Start;
     window.addEventListener("load", Start)
 
-    return {
-        myFavouriteNumber: 5
-    };
+    // return {
+    //     myFavouriteNumber: 5
+    // };
 })();
