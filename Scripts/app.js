@@ -105,7 +105,7 @@ let app = (function () {
         if (myArray[0].age === 25) {
             console.log("firstElement is pete")
         }
-        else{
+        else {
             console.log("wrong element")
         }
 
@@ -146,6 +146,11 @@ let app = (function () {
         console.log(myFavouriteList);
     }
 
+    
+    function ContactContent(){
+        
+    }
+
     function Start() {
         let title = document.title;
 
@@ -153,18 +158,27 @@ let app = (function () {
         console.log("-------------")
         console.log("Title: " + title);
 
+        try {
+            switch (title) {
+                case "Home":
+                    HomeContent();
+                    break;
 
-        switch (title) {
-            case "Home":
-                HomeContent();
-                break;
+                case "About":
+                    AboutContent();
+                    break;
 
-            case "About":
-                AboutContent();
-                break;
+                case "Contact":
+                    ContactContent();
+                    break;
 
-            case "default":
-                break;
+                default:
+                    throw ("no page exists");
+                    break;
+            }
+        }
+        catch{
+            console.log("Page title is unspecified")
         }
         return title;
     }
