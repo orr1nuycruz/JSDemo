@@ -1,18 +1,16 @@
-(function(content){
-    // about button click event handler
-  
 
+(function(content){
     
     function ReturnPI() {
         return Math.PI;
     }
 
     function AboutContent() {
-        console.log("about content triggered")
+        console.log("About Page being accessed")
         let myNum = ReturnPI();
         console.log("my funky number: " + myNum);
         let aboutParagraph = document.getElementById("paragraph");
-        let mySentence = "Hello nig";
+        let mySentence = "Hello there!";
         aboutParagraph.textContent = mySentence;
 
         // let myArray = new Array(); equivalent to let myArray = []

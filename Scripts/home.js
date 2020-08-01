@@ -13,6 +13,7 @@ let content;
         event.currentTarget.style.opacity = 1;
     }
     function HomeContent() {
+        console.log("Home Page being accessed")
         let AboutButton = document.getElementById("AboutButton");
         
         AboutButton.textContent = "About";

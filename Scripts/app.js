@@ -12,25 +12,6 @@ let app
 
 
 
-    
-    function ContactContent(){
-        let layer = 6
-        let x;
-        let y;
-        for (i = 0; i <= layer; i++){
-            for(x = 1; x <= (layer - i); x++){
-               console.log(" ");
-            }
-            for(y = 1; y <= i; y++){
-                console.log("*");
-            }
-            for(y = (i-1); y >= 1; y--){
-                console.log("*")
-            }
-            console.log("\n")
-        }
-    }
-
     function Start() {
         let title = document.title;
 
@@ -53,7 +34,8 @@ let app
                     break;
 
                 case "Contact":
-                    ContactContent();
+                    // ContactContent();
+                    content.ContactContent();
                     break;
 
                 default:
