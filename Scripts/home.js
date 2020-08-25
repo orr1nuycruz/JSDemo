@@ -13,7 +13,7 @@ let content;
         event.currentTarget.style.opacity = 1;
     }
     function HomeContent() {
-        console.log("Home Page being accessed")
+        console.log("%cHome Page being accessed", "font-weight:bold; font-size: 20px")
         let AboutButton = document.getElementById("AboutButton");
         
         AboutButton.textContent = "About";

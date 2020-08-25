@@ -15,7 +15,7 @@ let app
     function Start() {
         let title = document.title;
 
-        console.log("App Started");
+        console.log("%cApp Started", "font-weight:bold; font-size: 20px");
         console.log("-------------")
         console.log("Title: " + title);
 

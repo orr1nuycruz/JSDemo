@@ -6,7 +6,7 @@
     }
 
     function AboutContent() {
-        console.log("About Page being accessed")
+        console.log("%cAbout Page being accessed", "font-weight:bold; font-size: 20px")
         let myNum = ReturnPI();
         console.log("my funky number: " + myNum);
         let aboutParagraph = document.getElementById("paragraph");

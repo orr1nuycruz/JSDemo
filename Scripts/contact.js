@@ -17,11 +17,11 @@
 
 
     function ContactContent(){
-        console.log("Contact Page being accessed")
+        console.log("%cContact Page being accessed", "font-weight:bold; font-size: 20px; font-color: red");
         console.log(navigator);
         console.log(history);
         console.log(document);
-        console.log(screen);
+        console.log(screen); 
         console.log(location);
 
         document.getElementsByClassName("card-title")[0].textContent = "This you?";
@@ -40,7 +40,17 @@
 
         // add the Html element to the page somewhere
         document.forms[0].appendChild(cancelButton);
-        innerHeight = 500;
+
+
+        //set Title for the pushState
+        document.title = "hello there";
+        //use the history object to wipeout the url
+        history.pushState("", document.title, "/contact");
+
+        // use the location object to output my pathname
+        console.log(location.pathname);
+        
+        console.log(location.host);
 
 
     }
