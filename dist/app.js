@@ -1,19 +1,20 @@
-﻿// IIFE immediatly Invoked Function Expression
+"use strict";
 
-let app
+// IIFE immediatly Invoked Function Expression
+
+var app = void 0;
 (function (app) {
     //(function () {
     // prevent auto-declaring variables
-    "use strict"
+    "use strict";
 
     //function scope variable
 
     //let AboutButton = document.getElementById("AboutButton");
 
 
-
     function Start() {
-        let title = document.title;
+        var title = document.title;
 
         console.log("%cApp Started", "font-weight:bold; font-size: 20px");
         console.log("%c-------------", "font-weight:bold; font-size: 20px");
@@ -23,7 +24,7 @@ let app
             switch (title) {
                 case "Home":
                     // HomeContent();
-                    
+
                     content.HomeContent();
                     break;
 
@@ -39,18 +40,17 @@ let app
                     break;
 
                 default:
-                    throw ("no page exists");
+                    throw "no page exists";
                     break;
             }
-        }
-        catch(err){
-            console.warn("Page title is unspecified")
+        } catch (err) {
+            console.warn("Page title is unspecified");
         }
         return title;
     }
 
     // window.onload = Start;
-    window.addEventListener("load", Start)
+    window.addEventListener("load", Start);
 
     // return {
     //     myFavouriteNumber: 5
@@ -59,7 +59,6 @@ let app
     // these are all app properties
     app.Title = document.title;
     app.BrandImage = document.querySelector(".navbar-brand").innerHTML;
-
 })(app || (app = {}));
 
 // https://www.w3schools.com/js/js_htmldom_elements.asp
