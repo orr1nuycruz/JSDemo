@@ -49,7 +49,6 @@
 
         // use the location object to output my pathname
         console.log(location.pathname);
-        
         console.log(location.host);
 
 
