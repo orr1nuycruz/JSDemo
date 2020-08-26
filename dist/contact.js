@@ -16,8 +16,33 @@
     // content.mark = mark;
     // content.dahyun = dahyun;
 
+    function OutputforFormDatatoConsole() {
+        var fullName = document.getElementById("FullName");
+        var emailAddress = document.getElementById("EmailAddress");
+        var contactNumber = document.getElementById("ContactNumber");
+        var message = document.getElementById("Message");
+
+        // console.log("Fullname: " + fullName.value);
+        console.log("%cForm Data", "font-weight:bold; font-size: 20px;");
+        console.log("---------------------------------------------");
+        console.log("%cFull Name     : " + fullName.value, "color: blue");
+        console.log("Email Addess  : " + emailAddress.value);
+        console.log("Contact Number: " + contactNumber.value);
+        console.log("Message       : " + message.value);
+        console.log("---------------------------------------------");
+        console.log();
+        console.log("%cForm Properties", "font-weight:bold; font-size: 20px;");
+        console.log("---------------------------------------------");
+        console.log("%cForm Length : " + document.forms[0].length, "color: blue;");
+
+        for (var index = 0; index < document.forms[0].length; index++) {
+            console.log("%cForm Element : " + document.forms[0].elements[index].value, "color: blue;");
+        };
+    }
 
     function ContactContent() {
+        // document.forms[0].autocomplete = true;
+
         console.log("%cContact Page being accessed", "font-weight:bold; font-size: 20px; font-color: red");
         console.log(navigator);
         console.log(history);
@@ -42,14 +67,13 @@
         // add the Html element to the page somewhere
         document.forms[0].appendChild(cancelButton);
 
-        //set Title for the pushState
-        document.title = "hello there";
         //use the history object to wipeout the url
-        history.pushState("", document.title, "/contact");
 
-        // use the location object to output my pathname
-        console.log(location.pathname);
-        console.log(location.host);
+        var SubmitButton = document.getElementById("sendBtn");
+        SubmitButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            OutputforFormDatatoConsole(); // takes out the default function of the submit type button
+        });
     }
 
     //properties
